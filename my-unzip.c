@@ -22,16 +22,14 @@ void unzip_file(const char *filename) {
     while ((fread(&char_count, item_size, item_count, filepointer)) == 1) {
         // read the character that follows the count and check for EOF
         ch = fgetc(filepointer);
-        if (ch == EOF) {
-            exit(1);
-        }
+
         // write the character char_count times to standard output
         for (int i = 0; i < char_count; i++) {
             printf("%c", ch);
-        }
+        }   
 
     }
-
+    
     fclose(filepointer);
 }
 

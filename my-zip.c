@@ -51,7 +51,7 @@ void zip_file(const char *filename, int *char_counter, int *previous_char , int 
 }
 
 int main(int argc, char *argv[]) {
-    if (argc < 2) {
+       if (argc < 2) {
         fprintf(stderr, "my-zip: file1 [file2 ...]\n");
         exit(1);
     }
